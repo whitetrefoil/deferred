@@ -1,5 +1,5 @@
 export class Deferred<T = any> {
-  promise: Promise<T> = null
+  promise: Promise<T>;
 
   resolve: (result?: T|PromiseLike<T>) => void
   reject: (reason?: any) => void
