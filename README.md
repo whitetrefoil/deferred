@@ -12,6 +12,10 @@ please use something like babel to transfer this library.
 Changelog & Roadmap
 -------------------
 
+### v0.1.1
+
+* Upgrade dependencies to suppress Github.
+
 ### v0.1.0
 
 * Initial release.
