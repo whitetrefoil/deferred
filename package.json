@@ -30,20 +30,20 @@
   "directories": {
     "test": "tests"
   },
-  "engines": {
-    "node": ">=8.9.1"
-  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^24.0.13",
-    "jest": "^24.8.0",
-    "rimraf": "^2.6.3",
-    "ts-jest": "^24.0.2",
-    "tslint": "^5.17.0",
-    "typescript": "^3.5.1"
+    "@types/jest": "^25.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/parser": "^2.30.0",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^4.0.2",
+    "jest": "^26.0.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.8.3"
   },
   "jest": {
     "collectCoverage": true,
@@ -54,7 +54,7 @@
     "coveragePathIgnorePatterns": [
       "/~.*"
     ],
-    "coverageDirectory": "test_results",
+    "coverageDirectory": "test_results/jest",
     "coverageReporters": [
       "clover",
       "lcov",
@@ -62,21 +62,20 @@
     ],
     "globals": {
       "ts-jest": {
-        "skipBabel": false,
-        "useBabelrc": true
+        "tsConfig": "tests/tsconfig.json",
+        "babelConfig": false
       }
     },
-    "mapCoverage": true,
     "moduleFileExtensions": [
       "js",
       "json",
       "ts"
     ],
-    "moduleNameMapper": {},
+    "moduleNameMapper": {
+      "^~/(.*)$": "<rootDir>/src/$1"
+    },
+    "preset": "ts-jest",
     "setupFiles": [],
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.[jt]sx?$",
-    "transform": {
-      ".ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    }
+    "transformIgnorePatterns": []
   }
 }

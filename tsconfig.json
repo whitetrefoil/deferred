@@ -1,26 +1,35 @@
 {
   "compilerOptions": {
-    "outDir"                      : "lib/esm",
-    "declaration"                 : true,
-    "declarationDir"              : "lib/types",
     "allowJs"                     : false,
     "allowSyntheticDefaultImports": true,
-    "target"                      : "es2017",
-    "lib"                         : ["es2017", "es7", "dom"],
+    "baseUrl"                     : ".",
+    "declaration"                 : true,
+    "declarationDir"              : "lib/types",
+    "emitDecoratorMetadata"       : true,
+    "esModuleInterop"             : true,
+    "experimentalDecorators"      : true,
+    "inlineSources"               : false,
+    "inlineSourceMap"             : false,
+    "lib"                         : ["esnext", "dom", "dom.iterable"],
     "module"                      : "esnext",
     "moduleResolution"            : "node",
-    "inlineSources"               : true,
-    "inlineSourceMap"             : false,
+    "outDir"                      : "lib/esm",
+    "paths"                       : {
+      "~/*": ["./src/*"]
+    },
     "skipLibCheck"                : true,
     "sourceMap"                   : true,
-    "emitDecoratorMetadata"       : true,
-    "experimentalDecorators"      : true,
-    "removeComments"              : false,
-    "noImplicitAny"               : true
+    "strict"                      : true,
+    "target"                      : "es2018"
   },
   "include"        : [
     "src/**/*.ts",
     "src/**/*.js",
     "declarations/*.d.ts"
+  ],
+  "exclude"        : [
+    "**/node_modules",
+    "**/.*",
+    "**/~*"
   ]
 }
