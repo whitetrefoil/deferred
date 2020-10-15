@@ -1,17 +1,20 @@
-export class Deferred<T = unknown> {
+export interface Deferred<T> {
   promise: Promise<T>
-
-  resolve!: (result?: T|PromiseLike<T>) => void
-  reject!: (reason?: unknown) => void
-
-  constructor() {
-    this.promise = new Promise<T>((resolve, reject) => {
-      this.resolve = resolve
-      this.reject = reject
-    })
-  }
+  resolve: (result?: T|PromiseLike<T>) => void
+  reject: (reason?: unknown) => void
 }
 
 export function defer<T>(): Deferred<T> {
-  return new Deferred<T>()
+  let resolve!: (result?: T|PromiseLike<T>) => void
+  let reject!: (reason?: unknown) => void
+  const promise: Promise<T> = new Promise<T>((_resolve, _reject) => {
+    resolve = _resolve
+    reject = _reject
+  })
+
+  return {
+    promise,
+    resolve,
+    reject,
+  }
 }
