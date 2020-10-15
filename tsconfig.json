@@ -1,26 +1,30 @@
 {
+  "compileOnSave"  : false,
   "compilerOptions": {
-    "allowJs"                     : false,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl"                     : ".",
-    "declaration"                 : true,
-    "declarationDir"              : "lib/types",
-    "emitDecoratorMetadata"       : true,
-    "esModuleInterop"             : true,
-    "experimentalDecorators"      : true,
-    "inlineSources"               : false,
-    "inlineSourceMap"             : false,
-    "lib"                         : ["esnext", "dom", "dom.iterable"],
-    "module"                      : "esnext",
-    "moduleResolution"            : "node",
-    "outDir"                      : "lib/esm",
-    "paths"                       : {
+    "allowJs"                       : true,
+    "baseUrl"                       : ".",
+    "declaration"                   : true,
+    "declarationDir"                : "lib",
+    "emitDecoratorMetadata"         : true,
+    "esModuleInterop"               : true,
+    "experimentalDecorators"        : true,
+    "jsx"                           : "react",
+    "importsNotUsedAsValues"        : "error",
+    "inlineSourceMap"               : false,
+    "inlineSources"                 : false,
+    "lib"                           : ["esnext", "dom"],
+    "module"                        : "esnext",
+    "moduleResolution"              : "node",
+    "outDir"                        : "lib",
+    "paths"                         : {
       "~/*": ["./src/*"]
     },
-    "skipLibCheck"                : true,
-    "sourceMap"                   : true,
-    "strict"                      : true,
-    "target"                      : "es2018"
+    "skipDefaultLibCheck"           : true,
+    "skipLibCheck"                  : true,
+    "sourceMap"                     : true,
+    "strict"                        : true,
+    "suppressImplicitAnyIndexErrors": true,
+    "target"                        : "esnext"
   },
   "include"        : [
     "src/**/*.ts",
@@ -28,8 +32,6 @@
     "declarations/*.d.ts"
   ],
   "exclude"        : [
-    "**/node_modules",
-    "**/.*",
-    "**/~*"
+    "**/node_modules/**"
   ]
 }
