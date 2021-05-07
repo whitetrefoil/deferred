@@ -1,5 +1,5 @@
-const readline = require('readline')
-const process = require('process')
+import readline from 'node:readline'
+import process from 'node:process'
 
 console.log(`Preparing to publish version: ${process.env.npm_package_version}`)
 
