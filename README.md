@@ -12,6 +12,11 @@ please use something like babel to transfer this library.
 Changelog & Roadmap
 -------------------
 
+### v0.4.0
+
+* Now support native ESM module.
+* Upgrade infrastructure.
+
 ### v0.3.0
 
 * Now the returned value of `defer()` is no longer a class, but plain object.
