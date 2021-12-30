@@ -12,6 +12,10 @@ please use something like babel to transfer this library.
 Changelog & Roadmap
 -------------------
 
+### v0.5.0
+
+* infra!: Drop CJS.
+
 ### v0.4.1
 
 * Fix build check script.
