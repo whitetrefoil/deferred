@@ -1,14 +1,11 @@
 {
-  "extends"        : "../tsconfig.json",
+  "extends"        : "../src/tsconfig.json",
   "compilerOptions": {
-    "paths": {
-      "~/*": ["../src/*"]
-    }
+    "allowJs": true
   },
   "include"        : [
-    "**/*.ts",
-    "../src/**/*.ts",
-    "../src/**/*.js",
-    "../declarations/*.d.ts"
+    "../declarations/**/*",
+    "../src/**/*",
+    "**/*"
   ]
 }

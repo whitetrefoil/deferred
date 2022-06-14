@@ -18,3 +18,5 @@ export function defer<T>(): Deferred<T> {
     reject,
   }
 }
+
+export default defer
