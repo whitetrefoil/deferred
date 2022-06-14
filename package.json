@@ -1,6 +1,6 @@
 {
   "name": "@whitetrefoil/deferred",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "A clean & simple deferred implementation build upon existing `Promise` in global scope.",
   "keywords": [
     "async",

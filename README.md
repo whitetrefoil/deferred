@@ -6,11 +6,14 @@ A clean & simple deferred implementation build upon existing `Promise` in global
 Important
 ---------
 
-If your code isn't targeting the latest syntax spec of JS / ES,
-please use something like babel to transfer this library.
+This package is an ESM, cannot be used directly as a CJS module.
 
 Changelog & Roadmap
 -------------------
+
+### v0.6.0
+
+* Upgrade to typescript 3.7 & built to a real ESM.
 
 ### v0.5.0
 
